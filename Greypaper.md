@@ -11,8 +11,10 @@
 | Solution – Rule of Three | [Navigate](#solution) |
 | Founding Principles | [Navigate](#founding-principles) |
 | Project Milestones | [Navigate](#key-goals) |
-| Docker Style CLI | [In progress](#docker-cli) |
-| Graphic User Interface (GUI) | [In progress](#gui) |
+| Docker Style CLI | [Completed](#docker-cli) |
+| Graphic User Interface (GUI) | [Completed](#gui) |
+| Electron Desktop App | [In Progress](#electron) |
+| Auto Port-Forwarding | [In Progress](#port-forward) |
 | Tokenomics | [Navigate](#tokenomics)  |
 | Don the MASQ & Get Involved | [Support Us](#support-us) |
 | SUPPORT OUR CAUSE | [Donate](#donate) |
@@ -73,9 +75,9 @@ Read more about these methods in detail on the [Encryption Wiki Page]
 # FOUNDING PRINCIPLES
  
 ## Decentralized Governance
-The MASQ team intends to have a core group of individuals forming a committee. At an agreed point, the Committee will dissolve, allowing the Open Source project to be fully decentralized.
+The MASQ team has a core group of founders and external advisors. A future governance model will be explored, which allows MASQ Network project to be fully decentralized.
 
-There will be no CEO, and practical methods will be applied to ensure no one person controls the entire project.
+There will be no CEO, and practical methods are applied to ensure no one person controls the entire project.
 
 ## Community Spirit
 The MASQ team have all been born of other projects and communities - they understand that without the true spirit of ‘By the Community, for the Community” the network and thus the project will cease to exist. From these humble roots, the team want to actively grow the Community and realize the full potential that the project can bring to the modern world of internet communication.
@@ -89,28 +91,30 @@ Similarly, members of the Committee will remain pseudo-anonymous until such time
 # PROJECT MILESTONES
 
 <a id="docker-cli"></a>
-### Docker-Style CLI Interface - initial version completed, undergoing further development
-We have discontinued development and maintenance on the original GUI, which was not only inefficient, but didn't reflect the features of Node entirely. From here the development is focused on the skeleton behind any G/UI, and is now based on an interactive Command Line Interface, which will be adapted to be used in all further iterations of the software
+### Docker-Style CLI Interface - completed, v2 undergoing further development
+MASQ has developed on the skeleton behind any G/UI, and is now based on an interactive Command Line Interface, which will be adapted to be used in all further iterations of the software. This UI-Gateway interface has been implemented and allows UIs to communicate directly with the running Node instance (masqd). The interfacing itself is handled across WebSockets broadcasts, handled by UIs and node across the UI-Gateway.
 
-A configuration file can be set up and referenced by the software Daemon, and then Node can be initialized by the user with a few simple commands on a Command Prompt in Windows, Linux or Mac
+A configuration file can be set up and referenced by the software Daemon, and then MASQ Node can be initialized by the user with a few simple commands on a Command Prompt in Windows, Linux or Mac
 
 After more of the UI-Gateway infrastructure (MASQNode-UIv2) design is developed and implemented, further UI components and GUIs can be designed and built on top of the MASQ Node software for more user-friendly adoption and fully-fledged visual features.
 
-As of October 2020, most of the UI-Gateway interface has been implemented and allows UIs to communicate directly with the running Node instance (masqd).
-
-The interfacing itself is handled across WebSockets broadcasts, handled by UIs and node across the UI-Gateway.
-
 <a id="gui"></a>
-### Graphic User Interface (GUI) - in progress
-Through the power of the amazing MASQ Community, a group was formed who is developing a streamlined GUI that will operate by communicating through the new MASQNode-UIv2-Gateway over Websocket broadcasts and messaging.
+### Graphic User Interface (GUI) - completed, v2 undergoing further development
+Through the power of the amazing MASQ Community, a team developed a streamlined GUI that operates by communicating through the new MASQNode-UIv2-Gateway over Websocket broadcasts and messaging.
 
-The GUI will first be a browser-based solution for Alpha and Beta type testing with community, and then be developed into further iterations of GUIs. These may be based on other platforms or languages for greater user experience and streamlined features. This has been released on GitHub as an open source code repo. 
+The GUI is first a browser-based solution for Alpha and Beta type testing with community, and is being developed into further iterations of GUIs. These may be based on other platforms or languages for greater user experience and streamlined features. 
 
-In parallel to the browser version, an Electron-based native app GUI will be developed as well which can be run on the 3 main platforms.
+<a id="electron"></a>
+### Electron Desktop App - in progress
+In parallel to the browser version, an Electron-based desktop app is being developed, which can be run on the 3 main platforms - windows, MacOS and Linux.
+
+This will be complete with new visual UX/UI and integrate new features for a better user onboarding experience
+
+<a id="port-forward"></a>
+### Auto Port-Forwarding - in progress
+A major stumbling block with the software is communicating the traffic in and our of Node through user’s routers. The development team are automating this process so users will not have to configure their routers manually
 
 ### Additional Key Milestones
-
-* Auto Port-Forwarding - *next in development priority*
 
 * Clandestine Routing
 
@@ -119,11 +123,7 @@ In parallel to the browser version, an Electron-based native app GUI will be dev
 * Terminal Intelligence
 
 ## MASQ Project GitHub is Open Source
-The MASQ [GitHub] is an Open Source fork of Substratum (the code base was created and developed by Substratum LLC, a registered US company based in Tennessee) – under the GPLv3 license. All the forked source code used from the latest repo of Substratum is cited as such and credit given properly.
-
-Starting repositories include forks of:
-* [SubNode]
-* [SubTNT]
+MASQ developers [GitHub] start with Open Source code from Substratum (the code base was created and developed by Substratum LLC, a registered US company based in Tennessee) – under the GPLv3 license. All source code derived from Substratum is cited as such and credit given properly.
 
 <a id="tokenomics"></a>
 # Tokenomics
@@ -136,36 +136,36 @@ This monetization component is inherent to the security of the network, as it en
 - 'Bad actor' Nodes or Nodes not clearing their consuming token debt will be banned or marked in a delinquent list, thus rendering them inactive Nodes
 
 ## Smart Contract
-MASQ is using a clone of an OpenZeppelin ERC20 token smart contract adapted by Substratum (GitHub repo [sub-contract]), which was audited by Quantstamp in 2018-2019. It was modified with a single constructor to provide protection from double-spending attacks.
+MASQ is using a clone of an OpenZeppelin ERC20 token smart contract adapted by Substratum, which was audited by Quantstamp in 2018-2019. It was modified with a single constructor to provide protection from double-spending attacks.
 
 Our smart contract in Solidity can be view publicly on our [verified contract address](https://etherscan.io/address/0x02ba9B528425f9de08F961B88A10b03Be8B8B998) on etherscan.io
 
 ## Token Supply and Development
 
 *The MASQ v2 utility token was announced on 17th October, 2020.
-Detailed information can be immediately referenced on this [Medium post](https://medium.com/masq-project/masq-v2-tokenomics-8a9c4aa91cb4)*
+Detailed information can be immediately referenced on this [Medium](https://medium.com/masq-project/)*
 
-**Total Token Supply: 38,947,981**
+**Total Token Supply: 37,500,000**
 
-Airdrop Swap Pool: 4,447,981
+Airdrop Swapped: 1,304,570
 
 Circulating Initial Advisor Pool: 5,000,000
 
 Committee: 9,000,000
 
-Development & Marketing: 20,500,000
+Development & Marketing: 22,195,430
 
 *No further tokens will be minted or mined
 
 ## Development & Marketing Allocations:
 
-From the 20,500,000 tokens being released, they will be allocated towards key areas of project activity:
+From the 22,195,430 tokens being released, they will be allocated towards key areas of project activity:
 
-- Marketing & Liquidity 10,000,000
+- Marketing & Liquidity 11,500,000
 
 - Developer Community 9,000,000
 
-- Initial Staking Reward Pools 1,500,000
+- Initial Staking Reward Pools 1,695,430
 
 ## Token Releases:
 
@@ -175,24 +175,25 @@ Upon minting, non-circulating tokens will be distributed from the deployer walle
 
 - Upon minting — 5,500,000*
 
-- 2,500,000 released per month thereafter, for 6 months
+- 1,500,000 released monthly thereafter, for 12 months
 
-**Committee**
+**Founders**
 
 - Upon minting — 1,400,000**
 
-- 1,900,000 released per month thereafter, for total of 4 months
+- Released monthly thereafter, for total of 8 months
 
 \* *(note these tokens are made available to provide v2 token liquidity to Linkswap, and staking reward programs)*
 
-\** *(which is divided by committee)*
+\** *(divided by founding members)*
 
 
 
 <a id="support-us"></a>
 # GET INVOLVED
 
->Do you have a passion for Freedom? Freedom of Information for the world?
+>Do you have a passion for Internet Freedom?
+>Freedom of Information for the world?
 >Do you have knowledge of Rust, or similar programming and would like to volunteer some of your time?
 >Have you simply wanted and try to test a superior alternative to VPN or Tor?
 
@@ -207,7 +208,7 @@ Get in Touch
 <a id="donate"></a>
 # SUPPORT OUR CAUSE
 
-As all of our Committee are volunteers donating our time and efforts, we will rely on donations from our community to help fund hosting, development, website services and other project expenses
+As all of our team members are volunteers donating our time and efforts, we will rely on donations from our community to help fund hosting, development, website services and other project expenses
 
 ETH address for any donations from our wonderful community:
 
@@ -220,11 +221,6 @@ BTC - ```bc1qnsm0eqt9z9228n7hqc6a0g9dns84vsg3whnmsh```
 <a id="references"></a>
 ## REFERENCES
 
-**Substratum Sources and Links:**
-- [GNU GPLv3 License](https://github.com/SubstratumNetwork/SubstratumNode/blob/master/LICENSE)
-- [Original Codebase Repo](https://github.com/SubstratumNetwork/SubstratumNode)
-- [Original TNT Repo](https://github.com/SubstratumNetwork/TNT)
-
 **OpenZeppelin Token Contracts:**
 - [MIT License](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/LICENSE)
 - [Contract Library](https://github.com/OpenZeppelin/openzeppelin-contracts)
@@ -233,9 +229,6 @@ BTC - ```bc1qnsm0eqt9z9228n7hqc6a0g9dns84vsg3whnmsh```
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job)
 
-   [Original Codebase Repo]: <https://github.com/SubstratumNetwork/SubstratumNode>
-   [Original TNT Repo]: <https://github.com/SubstratumNetwork/TNT>
-   [sub-contract]: <https://github.com/SubstratumNetwork/sub-contract>
    [Telegram]: <https://t.me/MASQ_ai>
    [Twitter]: <https://twitter.com/MASQ_ai>
    [GitHub]: <https://github.com/MASQ-Project>
