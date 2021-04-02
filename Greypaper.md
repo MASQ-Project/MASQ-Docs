@@ -123,7 +123,7 @@ A major stumbling block with the software is communicating the traffic in and ou
 * Terminal Intelligence
 
 ## MASQ Project GitHub is Open Source
-The MASQ [GitHub] has used Open Source code from Substratum (the code base was created and developed by Substratum LLC, a registered US company based in Tennessee) – under the GPLv3 license. All the forked source code used from the latest repo of Substratum is cited as such and credit given properly.
+MASQ developers [GitHub] start with Open Source code from Substratum (the code base was created and developed by Substratum LLC, a registered US company based in Tennessee) – under the GPLv3 license. All source code derived from Substratum is cited as such and credit given properly.
 
 <a id="tokenomics"></a>
 # Tokenomics
@@ -136,14 +136,14 @@ This monetization component is inherent to the security of the network, as it en
 - 'Bad actor' Nodes or Nodes not clearing their consuming token debt will be banned or marked in a delinquent list, thus rendering them inactive Nodes
 
 ## Smart Contract
-MASQ is using a clone of an OpenZeppelin ERC20 token smart contract adapted by Substratum (GitHub repo [sub-contract]), which was audited by Quantstamp in 2018-2019. It was modified with a single constructor to provide protection from double-spending attacks.
+MASQ is using a clone of an OpenZeppelin ERC20 token smart contract adapted by Substratum, which was audited by Quantstamp in 2018-2019. It was modified with a single constructor to provide protection from double-spending attacks.
 
 Our smart contract in Solidity can be view publicly on our [verified contract address](https://etherscan.io/address/0x02ba9B528425f9de08F961B88A10b03Be8B8B998) on etherscan.io
 
 ## Token Supply and Development
 
 *The MASQ v2 utility token was announced on 17th October, 2020.
-Detailed information can be immediately referenced on this [Medium post](https://medium.com/masq-project/masq-v2-tokenomics-8a9c4aa91cb4)*
+Detailed information can be immediately referenced on this [Medium](https://medium.com/masq-project/)*
 
 **Total Token Supply: 37,500,000**
 
